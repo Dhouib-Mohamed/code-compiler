@@ -1,21 +1,22 @@
 .container {
-  min-width: 75%;
+  width: 60%;
   min-height: 100% !important;
   flex: 1;
   display: flex;
+  margin: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 1000px) {
+@media (max-width: 2000px) {
   .container {
-    min-width: 100%;
+    min-width: 90%;
   }
 }
 
 .main {
   padding: 2rem 0;
-  min-width: 90%;
+  width: 90%;
 }
 
 .grid {

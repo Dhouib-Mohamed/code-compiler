@@ -28,7 +28,7 @@ const HomePage=({language}) =>{
         setOutput(result.success?result.output:result.error)
     }
     return (
-        <Container className={styles.container}>
+        <div className={styles.container}>
             <Head>
                 <title>Online Compiler for {language}</title>
                 <meta name="description" content="Code Compiler"/>
@@ -37,7 +37,7 @@ const HomePage=({language}) =>{
 
             <main className={styles.main}>
                 <Options language={language} compile={compile}/>
-                <Container className={styles.grid}>
+                <div className={styles.grid}>
                     <div className={styles.code + " " + styles.grid_element} id="code">
                         <Code content={code} setContent={setCode}/>
                     </div >
@@ -47,7 +47,7 @@ const HomePage=({language}) =>{
                     <div  className={styles.grid_element}>
                         <Output content={output}/>
                     </div >
-                </Container>
+                </div>
             </main>
 
             <footer className={styles.footer}>
@@ -62,6 +62,6 @@ const HomePage=({language}) =>{
           </span>
                 </a>
             </footer>
-        </Container>
+        </div>
     )
 }

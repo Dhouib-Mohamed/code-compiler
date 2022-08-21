@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
                 <NavDropdown title="Online IDE" id="basic-nav-dropdown">
                   {languages.map((language)=>{
                     return(
-                        <NavDropdown.Item key ={language.name} href={language.name}>Online {language.name} Compiler</NavDropdown.Item>
+                        <NavDropdown.Item key ={language.name} href={'/compile/'+language.name}>Online {language.name} Compiler</NavDropdown.Item>
                     )
                   })}
                 </NavDropdown>
@@ -28,9 +28,9 @@ function MyApp({ Component, pageProps }) {
           </Container>
         </Navbar>
           </div>
-          <Container className={"all"}>
+          <div className={"all"}>
               <Component {...pageProps} />
-          </Container>
+          </div>
       </SSRProvider>
   );
 }

@@ -16,6 +16,7 @@ export default async function handler(code, language, input) {
     };
     try {
         const response =await  axios(config)
+        console.log(response.data)
         return response.data
     }
     catch (error) {
