@@ -1,21 +1,25 @@
 export default async function handler(code, language, input) {
     const axios = require("axios");
-    const qs = require("qs");
-    const data = qs.stringify({
+    const data = {
         code: code,
         language: language,
         input: input,
-    });
-    const config = {
-        method: "post",
-        url: "https://codex-api.herokuapp.com/",
+    }
+    const options = {
+        method: "POST",
+        url: 'https://online-code-compiler.p.rapidapi.com/v1/',
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            'content-type': 'application/json',
+            'X-RapidAPI-Key': 'fc2d47be28msh7bc2e82f9cce802p12011bjsnc20ffb20974d',
+            'X-RapidAPI-Host': 'online-code-compiler.p.rapidapi.com'
         },
-        data: data,
+        data: {
+            version: 'latest',
+            ...data
+        },
     };
     try {
-        const response =await  axios(config)
+        const response =await  axios.request(options)
         console.log(response.data)
         return response.data
     }

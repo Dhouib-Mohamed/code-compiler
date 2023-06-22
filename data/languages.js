@@ -1,7 +1,7 @@
 export const languages = [
     {
         name:"nodejs",
-        compileName:"js",
+        compileName:"nodejs",
         extention: ".jsx",
         code: ([
             'console.log("Hello World from Nodejs!")',
@@ -51,7 +51,7 @@ export const languages = [
         code: ([
             'import java.util.Scanner;',
             '',
-            'class HelloWorld {',
+            '  public class Main {',
             '  public static void main(String[] args) {',
             '    System.out.println("Hello World from Java!");',
             '    Scanner scan = new Scanner(System.in);',
@@ -80,7 +80,7 @@ export const languages = [
     },
     {
         name:"C-Sharp",
-        compileName:"cs",
+        compileName:"csharp",
         extention: ".cs",
         code: ([
             'using System;' ,
@@ -98,7 +98,7 @@ export const languages = [
     },
     {
         name:"python",
-        compileName:"py",
+        compileName:"python3",
         extention: ".py",
         code: ([
             'import sys',

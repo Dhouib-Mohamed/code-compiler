@@ -25,7 +25,7 @@ const HomePage=({language}) =>{
     const compile=async () => {
         const result = await handler(code, data.compileName, input)
         console.log(result)
-        setOutput(result.success?result.output:result.error)
+        setOutput(result.output??result.error)
     }
     return (
         <div className={styles.container}>
